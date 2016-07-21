@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Codero
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'layouts/application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'layouts/application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      .home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
+        %a.pure-menu-heading{href: '#'}
+          CODERO
+
+    = yield
