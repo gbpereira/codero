@@ -1,1 +1,19 @@
 %h1 Homepage
+
+%button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
+  = "Button"
+
+%button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored
+  %i.material-icons= "add"
+
+%button.mdl-button.mdl-js-button.mdl-button--primary
+  %i.material-icons= "add"
+
+%button#demo-menu-lower-left.mdl-button.mdl-js-button.mdl-button--icon
+  %i.material-icons= "more_vert"
+
+%ul.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect{for: "demo-menu-lower-left"}
+  %li.mdl-menu__item= "Some Action"
+  %li.mdl-menu__item= "Another Action"
+  %li.mdl-menu__item= "Disabled Action"
+  %li.mdl-menu__item= "Yet Another"

@@ -1,17 +1,30 @@
-!!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %title Codero
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag    'layouts/application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'layouts/application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      .home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
-        %a.pure-menu-heading{href: '#'}
-          CODERO
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      %header.mdl-layout__header
+        .mdl-layout__header-row
+          %span.mdl-layout-title
+            %strong CODERO
 
-    = yield
+      .mdl-grid
+        %form.login-form
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.block
+            %input#email.mdl-textfield__input{:type => "email"}
+            %label.mdl-textfield__label{:for => "email"} Email
+
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.block
+            %input#password.mdl-textfield__input{:type => "password"}
+            %label.mdl-textfield__label{:for => "password"} Password
+
+          %a{href: '#'} Esqueci minha senha
+          %button.mdl-button.mdl-js-button.mdl-button--primary.right Login
