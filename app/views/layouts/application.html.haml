@@ -16,15 +16,4 @@
           %span.mdl-layout-title
             %strong CODERO
 
-      .mdl-grid
-        %form.login-form
-          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.block
-            %input#email.mdl-textfield__input{:type => "email"}
-            %label.mdl-textfield__label{:for => "email"} Email
-
-          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.block
-            %input#password.mdl-textfield__input{:type => "password"}
-            %label.mdl-textfield__label{:for => "password"} Password
-
-          %a{href: '#'} Esqueci minha senha
-          %button.mdl-button.mdl-js-button.mdl-button--primary.right Login
+      = yield
